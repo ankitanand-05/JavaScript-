@@ -14,3 +14,19 @@ let score = "7"
   true = > 1;  false => 0
 
 */
+
+// ********************** OPERATIONS ********************
+
+console.log(2 ** 4)   // 2 to the power 4
+
+//     CONCAENATION
+
+console.log("1" + 2)  // 12
+console.log(1 + "2")  // 12
+console.log("1" + "2") // 12
+console.log("1" + 2)  // 3
+console.log(1 + 2 + "5")  // 35
+
+// Prefix and Postfix    ++a , a++
+// link to read -- > https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+// or use mdn documentation
