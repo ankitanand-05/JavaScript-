@@ -85,7 +85,8 @@ switch (months) {
 
     default:
     console.log("default case match");      
-}   // output :  march
+}   // output : feb
+                march
                 april
                 default case match
 
