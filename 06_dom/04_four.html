@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style = " background-color: black; color: #fff;">
+    <ul class = "language">
+        <li> JavaScript</li>  <!-- Now only javascript is presentg inside the language, so add more language so create a function for it -->
+    </ul>
+</body>
+<script>
+    function addLanguage (langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    // same work can be done using appendChild() also, it makes the code more optimised 
+
+    function addOptiLanguage (langName) {
+        const li = document.createElement('li') // don't think about error as already a li variable is created above  => there won't be any error because uska scope alag hai 
+
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage("golang")  // added golang
+
+
+    // Edit the 2nd value
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //  secondLang.innerHTML = "java"    // python(2nd language or 2nd child)changed to java
+     // or 
+  const newli = document.createElement('li')
+  newli.textContent = "java" // abhi ye hawa mein created hai 
+  secondLang.replaceWith(newli) // python is replaced with java ,  hmm innerHTML bhi kr skte hai no prblm, also we can use appendChildren
+  
+  // Edit the 1st language
+  const firstLang = document.querySelector("li:first-child")
+  firstLang.outerHTML = '<li> TypeScript</li>'   // JavaScript changed to TypeScript
+
+
+     // remove the value/element
+        // TypeScript
+        // java
+        // typescript
+        // golang       -- remove the golang
+     //  -->
+
+ const lastLang = document.querySelector("li:last-child")
+   lastLang.remove()   // current web page
+                            // TypeScript
+                            // java
+                            // typescript
+</script>
+</html>
